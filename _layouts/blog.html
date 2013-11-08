@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="blog">
+  <div class="header-image"></div>
+
+  <div class="container">
+    <section class="posts">
+      {% for post in site.posts %}
+        <article class="post border-box">
+          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <div class="double-border"></div>
+          <div class="content">
+            {{ post.content }}
+          </div>
+          <p class="date">
+            Publicerad den {{ post.date | date_to_string }}
+          </p>
+        </article>
+      {% endfor %}
+    </section>
+  </div>
+</div>

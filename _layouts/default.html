@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <div id="wrapper">
+          <a id="menu-button" href="#nav">Meny</a>
+          <header id="nav">
+            <div class="container">
+              <nav>
+                <ul class="main-nav">
+                  <li><a href="/">Hem</a></li>
+                  <li><a href="/blogg.html">Blogg</a></li>
+                  <li><a href="/portfolio.html">Portfolio</a></li>
+                  <li><a href="/om-mig.html">Om mig</a></li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+          <div class="site">
+            {{ content }}
+          </div>
+        </div>
+        <script src="/javascripts/application.js"></script>
+    </body>
+</html>

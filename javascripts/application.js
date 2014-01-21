@@ -2,7 +2,18 @@
   'use strict';
 
   window.onload = function () {
-    var menuButton = new MenuButton();
+    var blockContextMenu, images, menuButton;
+
+    blockContextMenu = function (evt) {
+      alert('Vid behov av lån var vänlig kontakta mig!');
+      evt.preventDefault();
+      return false;
+    };
+
+    images = document.getElementsByTagName('img');
+    images.addEventListener('contextmenu', blockContextMenu);
+
+    menuButton = new MenuButton();
   };
 
   function MenuButton() {

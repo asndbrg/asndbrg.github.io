@@ -1,19 +1,21 @@
 (function() {
   'use strict';
 
-  window.onload = function () {
-    var blockContextMenu, images, menuButton;
+  document.oncontextmenu = context_menu;
 
-    blockContextMenu = function (evt) {
-      alert('Vid behov av lån var vänlig kontakta mig!');
-      evt.preventDefault();
+  function context_menu(e) {
+  if (!e) var e = window.event;
+    var eTarget = (window.event) ? e.srcElement : e.target;
+
+    if (eTarget.nodeName == "IMG") {
+      //context menu attempt on top of an image element
+      e.preventDefault();
       return false;
-    };
+    }
+  }
 
-    images = document.getElementsByTagName('img');
-    images.addEventListener('contextmenu', blockContextMenu);
-
-    menuButton = new MenuButton();
+  window.onload = function () {
+    var menuButton = new MenuButton();
   };
 
   function MenuButton() {

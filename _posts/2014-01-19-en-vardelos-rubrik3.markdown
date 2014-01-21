@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "En värdelös rubrik 3"
+title:  "En v√§rdel√∂s rubrik 3"
 date:   2014-01-19 20:26:11
 categories: Blogg
 ---

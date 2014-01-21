@@ -8,7 +8,7 @@
     var eTarget = (window.event) ? e.srcElement : e.target;
 
     if (eTarget.nodeName == "IMG") {
-      //context menu attempt on top of an image element
+      alert('Vid behov av lån var vänlig kontakta mig!');
       e.preventDefault();
       return false;
     }

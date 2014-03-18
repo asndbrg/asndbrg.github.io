@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Liw på besök"
+date:   2014-03-18 14:22:11
+categories: Blogg
+---
+
+![Liw](/images/liw.jpg)
+![park](/images/liwpark.jpg)
+![krokus](/images/liwkrokus.jpg)
+
+<div class="text">
+  Förra helgen var Liw på besök för första gången. Solen sken med oss hela helgen så att vi kunde gå till fots och se Malmö. På söndagen var det en obligatorisk falafellrulle för 25kr. Åt upp den i Folkets park, skrattade åt roliga föräldrar och tittade på de första krokusarna. Önskar att min Liw kunde bo här hela tiden, då skulle livet vara som bäst. 
+</div>

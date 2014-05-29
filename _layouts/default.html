@@ -1,30 +1,36 @@
 <!doctype html>
 <html lang="sv">
-    <head>
-        <meta charset="utf-8">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="/css/main.css">
-    </head>
-    <body>
-        <div id="wrapper">
-          <a id="menu-button" href="#nav">Meny</a>
-          <header id="nav">
-            <div class="container">
-              <nav>
-                <ul class="main-nav">
-                  <li><a href="/">Hem</a></li>
-                  <li><a href="/blogg.html">Blogg</a></li>
-                  <li><a href="/portfolio.html">Portfolio</a></li>
-                  <li><a href="/om-mig.html">Om mig</a></li>
-                </ul>
-              </nav>
-            </div>
-          </header>
-          <div class="site">
-            {{ content }}
-          </div>
-        </div>
-        <script src="/javascripts/application.js"></script>
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/stylesheets/application.css">
+  </head>
+  {% assign url = page.url|remove:'index.html' %}
+  <body class="{% if url contains'/blogg' %}blogg{% endif %} {% if url contains'/portfolio' %}portfolio{% endif %} {% if url contains'/om-mig' %}om-mig{% endif %}">
+    <nav class="main-nav">
+      <h1 class="logo"><a class="logo-link" href="/"><img class="logo-image" src="/images/logotyp.png" alt="Amanda Sandberg" /></a></h1>
+      <ul class="main-nav-list main-nav-level-one">
+        <li><a class="main-nav-list-link {% if url == '/' %}main-nav-list-link-current{% endif %}" href="/">Hem</a></li>
+        <li>
+          <a class="main-nav-list-link {% if url contains'/blogg' %}main-nav-list-link-current{% endif %}" href="/blogg.html">Blogg</a>
+          <ul class="main-nav-list main-nav-level-two">
+            <li><a class="main-nav-list-link {% if url == '/blogg.html#2014' %}main-nav-list-link-current{% endif %}" href="/blogg.html#2014">2014</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="main-nav-list-link {% if url contains'/portfolio' %}main-nav-list-link-current{% endif %}" href="/portfolio.html">Portfolio</a>
+          <ul class="main-nav-list main-nav-level-two">
+            <li><a class="main-nav-list-link {% if url == '/portfolio/kruger.html' %}main-nav-list-link-current{% endif %}" href="/portfolio/kruger.html">Kruger</a></li>
+            <li><a class="main-nav-list-link {% if url == '/portfolio/marilyn.html' %}main-nav-list-link-current{% endif %}" href="/portfolio/marilyn.html">Marilyn</a></li>
+            <li><a class="main-nav-list-link {% if url == '/portfolio/pixie-sans.html' %}main-nav-list-link-current{% endif %}" href="/portfolio/pixie-sans.html">Pixie sans</a></li>
+            <li><a class="main-nav-list-link {% if url == '/portfolio/parfym.html' %}main-nav-list-link-current{% endif %}" href="/portfolio/parfym.html">Parfym</a></li>
+          </ul>
+        </li>
+        <li><a class="main-nav-list-link {% if url == '/om-mig.html' %}main-nav-list-link-current{% endif %}" href="/om-mig.html">Om mig</a></li>
+      </ul>
+    </nav>
+    {{ content }}
+    <script src="/javascripts/application.js"></script>
+  </body>
 </html>
